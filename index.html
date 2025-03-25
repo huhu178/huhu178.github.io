@@ -13,6 +13,7 @@
     .title-container {
       @apply flex justify-between items-center h-20;
       border-bottom: 1px solid #eee;
+      padding: 0 20px;
     }
     .titles {
       @apply flex flex-col items-center space-y-2;
@@ -24,7 +25,7 @@
       @apply text-xl text-gray-600;
     }
     .right-title {
-      @apply text-lg font-semibold text-gray-700;
+      @apply flex flex-col items-end space-y-2;
     }
   </style>
 </head>
@@ -34,11 +35,9 @@
       <h1 class="chinese-title">医学研究设计与分析平台</h1>
       <h2 class="english-title">AI Agent Platform for Medical Research Design and Analysis</h2>
     </div>
-    <div class="right-title">国家健康医疗大数据研究院</div>
-  </div>
-  <!-- 添加图片 -->
-  <div class="flex justify-center my-4">
-    <img src="your-image-url.jpg" alt="Medical Research Platform" class="w-32 h-32">
+    <div class="right-title">
+      <h3 class="text-lg font-semibold text-gray-700">国家健康医疗大数据研究院</h3>
+    </div>
   </div>
   <div class="flex flex-col h-screen bg-gray-50">
     <!-- 头部 -->
@@ -60,6 +59,7 @@
     </header>
   </div>
 </body>
+
 
 
     <!-- 主要内容 -->
