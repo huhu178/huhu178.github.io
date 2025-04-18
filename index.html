@@ -28,32 +28,27 @@
 <body>
   <div class="flex flex-col h-screen bg-gray-50">
     <!-- 头部保持不变 -->
-    <header class="bg-blue-700 text-white p-4 shadow-md">
-      <div class="container mx-auto flex justify-between items-center">
-        <div class="flex items-center space-x-2 flex-1">
-          <!-- Logo图片 -->
-          <img src="图片2222222.png" alt="" class="h-16 w-auto rounded-md mr-2">
-          
+    <header class="bg-indigo-700 text-white p-4 shadow-md relative flex items-center">
+      <!-- Logo图片 - 放在header的最左侧 -->
+      <img src="图片2222222.png" alt="" class="h-16 w-auto rounded-md ml-2">
+      
+      <div class="container mx-auto flex justify-start items-center">
+        <div class="flex items-center flex-1 pl-6">
           <!-- 三个标题横向排列 -->
-          <div class="flex items-center w-full justify-between">
-            <h1 class="text-base font-bold">国家健康医疗大数据研究院</h1>
-            <div class="h-8 border-l border-white opacity-50 mx-1"></div>
-            <h1 class="text-base font-bold">医学研究设计与分析AI智能体平台</h1>
-            <div class="h-8 border-l border-white opacity-50 mx-1"></div>
-            <h1 class="text-base font-bold">AI Agent Platform for Medical Research Design and Analysis</h1>
+          <div class="flex items-center justify-start ml-0 space-x-4">
+            <h1 class="text-xl font-bold">国家健康医疗大数据研究院</h1>
+            <div class="h-10 border-l border-white opacity-50"></div>
+            <h1 class="text-xl font-bold">医学研究设计与分析AI智能体平台</h1>
+            <div class="h-10 border-l border-white opacity-50"></div>
+            <h1 class="text-xl font-bold">AI Agent Platform for Medical Research Design and Analysis</h1>
           </div>
         </div>
         
-        <div class="flex items-center space-x-4">
+        <!-- 移除用户信息部分，保留设置按钮 -->
+        <div class="flex items-center">
           <button class="p-2 rounded hover:bg-blue-600" title="设置">
             <span class="icon settings-icon text-white"></span>
           </button>
-          <div class="flex items-center">
-            <span class="mr-2">张医生</span>
-            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-              <span class="icon user-icon text-white" style="width: 16px; height: 16px; margin: 0;"></span>
-            </div>
-          </div>
         </div>
       </div>
     </header>
