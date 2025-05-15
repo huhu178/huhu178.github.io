@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeerFlow 项目解读</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        nav { text-align: center; margin-bottom: 20px; }
+        nav a { color: #333; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #555; }
+        section { margin-bottom: 20px; padding: 15px; border-bottom: 1px #eee solid; }
+        section:last-child { border-bottom: none; }
+        h2 { color: #333; border-bottom: 2px solid #333; padding-bottom: 5px; }
+        h3 { color: #555; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight { color: #007bff; font-weight: bold; }
+        .architecture-img { display: block; max-width: 100%; height: auto; margin: 20px auto; border: 1px solid #ddd; }
+        .important-note { background-color: #e7f3fe; border-left: 6px solid #2196F3; padding: 10px; margin-bottom: 15px; }
+        .video-container { text-align: center; margin: 20px 0; }
+        .video-container p { margin-bottom: 10px; }
+        footer { text-align: center; padding: 20px; background: #333; color: #fff; margin-top: 30px; }
+        .button-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🦌 DeerFlow 项目解读</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="#introduction">项目简介</a>
+            <a href="#features">核心特性</a>
+            <a href="#architecture">系统架构</a>
+            <a href="#demos">应用演示</a>
+            <a href="#significance">项目意义</a>
+        </nav>
+
+        <section id="introduction">
+            <h2>项目简介：深度探索与高效研究的新范式</h2>
+            <p><strong>DeerFlow (Deep Exploration and Efficient Research Flow)</strong> 是一款由社区驱动的先进深度研究框架。它旨在通过有机结合前沿的<strong>语言模型 (LLM)</strong> 与一系列专业工具（如强大的网络搜索、智能爬虫及Python代码执行能力），彻底革新信息获取、分析及内容创作的效率和深度。</p>
+            <p>我们的核心理念是"源于开源，回馈开源"，致力于在巨人肩膀上持续创新，并为技术社区贡献价值。</p>
+            <div class="important-note">
+                <p><strong>核心目标：</strong>将AI的理解与推理能力赋予传统研究工具，实现自动化、智能化的深度研究流程，并能生成高质量的综合报告、播客乃至演示文稿。</p>
+            </div>
+            <p style="text-align: center;">
+                <a href="https://deerflow.tech/" target="_blank" rel="noopener" class="button-link">访问 DeerFlow 官方网站</a>
+            </p>
+        </section>
+
+        <section id="features">
+            <h2>核心特性：驱动研究自动化的强大引擎</h2>
+            <ul>
+                <li>
+                    <h3>🤖 强大的语言模型集成</h3>
+                    <ul>
+                        <li>广泛支持：通过 <a href="https://docs.litellm.ai/docs/providers" target="_blank" rel="noopener">LiteLLM</a> 可集成市面上绝大多数主流模型。</li>
+                        <li>开源友好：原生支持 Qwen 等优秀开源模型。</li>
+                        <li>标准兼容：全面兼容 OpenAI 的 API 接口标准。</li>
+                        <li>分层智能：构建多层LLM系统，针对不同复杂度的任务调用最合适的模型，优化成本与效率。</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>🛠️ 专业的工具集与MCP集成</h3>
+                    <ul>
+                        <li>全方位搜索与检索：
+                            <ul>
+                                <li>集成 Tavily、Brave Search 等专业搜索引擎。</li>
+                                <li>利用 Jina AI 实现智能网页内容爬取与信息提取。</li>
+                            </ul>
+                        </li>
+                        <li>无缝MCP（Model Context Protocol）集成：
+                            <ul>
+                                <li>极大扩展系统能力边界，可接入私有领域知识、知识图谱、定制化网页浏览服务等。</li>
+                                <li>促进多样化研究工具与方法的灵活集成，满足复杂研究需求。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>🤝 智能的人机协作</h3>
+                    <ul>
+                        <li>人在环路 (Human-in-the-Loop)：
+                            <ul>
+                                <li>支持用户通过自然语言交互式地审查和修改AI生成的研究计划。</li>
+                                <li>可配置自动接受研究计划，提升自动化流程效率。</li>
+                            </ul>
+                        </li>
+                        <li>强大的报告后期编辑：
+                            <ul>
+                                <li>提供类似 Notion 的块级编辑体验。</li>
+                                <li>内置AI辅助优化功能，如内容润色、句子缩写与扩展等。</li>
+                                <li>技术由 <a href="https://tiptap.dev/" target="_blank" rel="noopener">Tiptap</a> 提供支持。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>✍️ 丰富的内容创作能力</h3>
+                    <ul>
+                        <li>多媒体输出：AI驱动生成播客脚本并合成为音频。</li>
+                        <li>演示文稿自动化：自动创建结构清晰的 PowerPoint 演示文稿。</li>
+                        <li>高度可定制：提供模板以满足个性化内容需求，让最终产出更贴合实际场景。</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="architecture">
+            <h2>系统架构：模块化多智能体的高效协同</h2>
+            <p>DeerFlow 采用先进的模块化多智能体系统架构，专为自动化深度研究和代码分析任务而设计。该系统基于 <a href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener">LangGraph</a> 构建，实现了灵活的、基于状态定义的工作流，各智能体组件通过精心设计的消息传递系统高效通信。</p>
+            <img src="https://raw.githubusercontent.com/bytedance/deer-flow/main/assets/architecture.png" alt="DeerFlow 架构图" class="architecture-img">
+            <p style="text-align:center; font-style:italic;">在 <a href="https://deerflow.tech/#multi-agent-architecture" target="_blank" rel="noopener">deerflow.tech</a> 上查看实时架构演示</p>
+            <h3>核心组件流程：</h3>
+            <ol>
+                <li><strong>协调器 (Coordinator)：</strong>作为工作流的入口和总控中心。负责理解用户输入，启动研究流程，并在合适的时机将任务委派给规划器。</li>
+                <li><strong>规划器 (Planner)：</strong>系统的"大脑"，负责任务分解和策略规划。它会分析研究目标，创建结构化的执行计划，并判断现有信息是否充足或需要进一步研究。</li>
+                <li><strong>研究团队 (Research Team)：</strong>执行具体研究任务的专业智能体集合。
+                    <ul>
+                        <li><strong>研究员 (Researcher)：</strong>利用网络搜索引擎、爬虫及MCP服务等工具进行信息搜集。</li>
+                        <li><strong>编码员 (Coder)：</strong>使用Python REPL（交互式执行环境）工具处理代码分析、数据处理和技术型任务。</li>
+                    </ul>
+                </li>
+                <li><strong>报告员 (Reporter)：</strong>负责对研究成果进行最终整合与呈现。汇总研究团队的发现，组织信息，并生成全面的研究报告。</li>
+            </ol>
+        </section>
+
+        <section id="demos">
+            <h2>应用演示：直观感受DeerFlow的强大功能</h2>
+            <div class="video-container">
+                <p><strong>核心功能演示视频：</strong></p>
+                <video width="80%" controls>
+                    <source src="https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e" type="video/mp4">
+                    您的浏览器不支持 HTML5 video 标签。您可以 <a href="https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e">点击此处</a> 查看视频。
+                </video>
+                <p>该演示展示了DeerFlow如何无缝集成MCP服务，进行深度研究并生成包含图像的综合报告，最终还能基于报告创建播客音频。</p>
+            </div>
+            <h3>实际案例回放：</h3>
+            <ul>
+                <li><a href="https://deerflow.tech/chat?replay=eiffel-tower-vs-tallest-building" target="_blank" rel="noopener">埃菲尔铁塔与最高建筑相比有多高？</a></li>
+                <li><a href="https://deerflow.tech/chat?replay=github-top-trending-repo" target="_blank" rel="noopener">GitHub上最热门的仓库有哪些？</a></li>
+                <li><a href="https://deer-flow.github.io/examples/rental_apartment_decoration_report.html" target="_blank" rel="noopener">如何装饰租赁公寓？ (示例报告)</a></li>
+            </ul>
+            <p style="text-align: center;">
+                <a href="https://deerflow.tech/#case-studies" target="_blank" rel="noopener" class="button-link">探索更多官方回放示例</a>
+            </p>
+        </section>
+
+        <section id="significance">
+            <h2>项目意义与价值展望</h2>
+            <p>DeerFlow 不仅仅是一个工具框架，它更代表了一种全新的研究和知识探索模式。通过将AI的强大能力与自动化流程相结合，DeerFlow有望：</p>
+            <ul>
+                <li><span class="highlight">大幅提升研究效率：</span>自动化繁琐的信息收集、筛选和初步分析过程，让研究人员能更专注于洞察和创新。</li>
+                <li><span class="highlight">拓展研究的深度与广度：</span>轻松整合多源异构信息，利用AI进行复杂关联分析，发现传统方法难以触及的深层联系。</li>
+                <li><span class="highlight">赋能内容创新：</span>快速生成结构化、高质量的报告、文章、播客等多样化内容，满足不同场景的需求。</li>
+                <li><span class="highlight">降低专业研究门槛：</span>通过智能化的引导和辅助，使更多人能够进行系统性的深度研究。</li>
+                <li><span class="highlight">推动行业智能化转型：</span>为咨询、金融、教育、科研等多个行业提供强大的AI研究助手，助力决策和创新。</li>
+            </ul>
+            <p>我们相信，随着技术的不断演进和社区的持续贡献，DeerFlow 将在自动化知识工作领域扮演越来越重要的角色，成为连接AI能力与实际应用的关键桥梁。</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DeerFlow 项目解读 (根据官方 README 整理)</p>
+    </footer>
+</body>
+</html>
